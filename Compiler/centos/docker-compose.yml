@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  compiler-cent:
+    build:
+      context: .
+      dockerfile: DockerFile
+    container_name: compiler-cent
+    volumes:
+      - ./:/compiler
+    stdin_open: true
+    tty: true
+    working_dir: /compiler

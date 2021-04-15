@@ -1,0 +1,6 @@
+FROM centos:centos7
+ENV DEBIAN_FRONTEND=noninteractive
+RUN yum update -y && \
+  yum groupinstall -y 'Development Tools'
+COPY ./ /compiler
+WORKDIR /compiler
