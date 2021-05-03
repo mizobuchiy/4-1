@@ -1,0 +1,6 @@
+(defun g (x y)
+  (cond ((atom x) y)
+        ((atom y) x)
+        (t (cons (car x) (cdr y)))
+  )
+)
